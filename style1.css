@@ -1,0 +1,150 @@
+header{
+    
+    color: rgb(9, 40, 51);
+    padding: 2px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+body{
+    background-image: url(sam.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    padding: 20px;
+    
+
+}
+.navbar{
+padding : 1rem;
+position: sticky;
+
+}
+.nav-container{
+    max-width: 1200px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav-brand{
+    color:white;
+    text-decoration:none ;
+    font-size:1.5rem;
+    font-weight: bold;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.nav-links li a{
+color:  rgb(9, 40, 51);
+text-decoration:none;
+font-size:1.1rem;
+
+}
+.nav-links a:hover{
+    color: rgb(171, 209, 231);
+}
+.introduction {
+    padding: 23px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(9, 40, 51);
+    background-color: rgb(186, 210, 231);
+    width: 1250px;
+    width:90%;
+    text-align: left;
+}
+.introduction h2{
+    font-size: 30px;
+    color: rgb(9, 40, 51);
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: left;
+
+}
+.intro-container {
+    display: flex;  
+    align-items: center; 
+    gap: 20px;
+}
+.intro-container :hover{
+    color: rgb(9, 40, 51);
+}
+
+.intro-image {
+    border-radius:80px; 
+}
+
+.intro-text {
+    font-size: 20px;
+    color: rgb(9, 40, 51);
+    text-align: left;
+}
+.contact-section {
+    background-color:  rgb(186, 210, 231);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgb(9, 40, 51);
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .contact-section h2 {
+    text-align: center;
+    color:rgb(9, 40, 51);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  input, textarea, button {
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border:   rgb(9, 40, 51);
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: rgb(9, 40, 51);
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: rgb(186, 210, 231);
+  }
+  
+footer {
+    background-color:rgb(9, 40, 51);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  .social-links a:hover {
+    color: rgb(186, 210, 223);
+  }
