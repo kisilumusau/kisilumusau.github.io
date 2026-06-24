@@ -1,7 +1,6 @@
 # Multi-Room Chat Application
-# Contributors-
-Samuel Kisilu Musau - GH104598 - Server Implementation, room management, private messaging- 
-Leon Kimutai Langat - GH1046169 - Client Implementation, testing, documentation.
+# Contributors- Samuel Kisilu Musau - GH104598 - Server Implementation, room management, private messaging- 
+		Leon Kimutai Langat - GH1046169 - Client Implementation, testing, documentation.
 
 
 ## Overview
@@ -128,4 +127,11 @@ The application includes error handling for:
 To change the server IP address, edit the following line in both files:
 
 **f_server.py:**
-```python host = '192.168.2.34'  # Replace with your current IP , client.connect(('192.168.2.34', 55555))  # Replace with server IP **  **
+```python
+host = '192.168.2.34'  # Replace with your current IP
+client.connect(('192.168.2.34', 55555))  # Replace with server IP
+
+
+
+
+
