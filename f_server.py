@@ -81,7 +81,7 @@ def handle(client):
                         send_private(client, f"Room '{arg}' created and you joined it!")
                         broadcast_to_room(f"[SYSTEM]: {sender_nick} created and joined room '{arg}'".encode('ascii'), arg)
 
-                elif cmd == '/msg':
+                elif cmd == '/msg': # User to User private messaging
                     if not arg:
                         send_private(client, "Usage: /msg <nickname> <message>")
                     else: # Split into target nickname and the message
