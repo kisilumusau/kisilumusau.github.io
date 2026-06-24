@@ -1,6 +1,7 @@
 # Multi-Room Chat Application
 # Contributors- 
 Samuel Kisilu Musau - GH104598 - Server Implementation, room management, private messaging
+
 Leon Kimutai Langat - GH1046169 - Client Implementation, testing, documentation.
 
 
