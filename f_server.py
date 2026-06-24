@@ -45,7 +45,7 @@ def broadcast_to_room(message, room_name, skip_client=None):
 
 def send_private(client, message):
     try:
-        client.send(f"[SERVER]: {message}".encode('ascii')) 
+        client.send(f"[SERVER]: {message}".encode('ascii'))  
     except:
         print(f"Error occurred while sending private message to client: {client}") # Error handling if sending fails
         pass
@@ -81,6 +81,25 @@ def handle(client):
                         send_private(client, f"Room '{arg}' created and you joined it!")
                         broadcast_to_room(f"[SYSTEM]: {sender_nick} created and joined room '{arg}'".encode('ascii'), arg)
 
+                elif cmd == '/msg':
+                    if not arg:
+                        send_private(client, "Usage: /msg <nickname> <message>")
+                    else: # Split into target nickname and the message
+                        parts_msg = arg.split(' ', 1)
+                        if len(parts_msg) < 2:
+                            send_private(client, "Usage: /msg <nickname> <message>")
+                        else:
+                            target_nick = parts_msg [0]
+                            private_message = parts_msg [1]
+
+                            # Find the target client
+                            target_client = find_client_by_nickname(target_nick)
+                            if not target_client:
+                                send_private(client, f"User '{target_nick}' not found or offline.")
+                            else: # Send the private message to the target
+                                send_private(target_client, f"[PRIVATE from {sender_nick}]: {private_message}")
+                                send_private(client, f"[PRIVATE to {target_nick}]: {private_message}") #Server log
+                                
                 elif cmd == '/join': # Join an existing room
                     if not arg: # If no room name is provided, send usage message
                         send_private(client, "Usage: /join <room_name>")
